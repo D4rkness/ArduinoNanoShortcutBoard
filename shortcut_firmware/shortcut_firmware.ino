@@ -18,6 +18,9 @@
 // Pin of the WS2812b Leds
 #define LED_PIN 13
 
+// Enum for the keystates pressed, released or none
+enum KeyState {PRESSED, RELEASED, NONE};
+
 // All switch ids inside of an array for easier acces
 uint8_t allSwitchIds[] = {F1_INPUT,
                           F2_INPUT,
@@ -44,6 +47,9 @@ long unbouncingButtonTime [numPins];
 // Waittime for btnUnbouncing
 long waitTime = 80;
 
+// Enables the mode to change the color
+bool colorChangeMode = false;
+
 // Init Setupmethod
 void setup()
 {
@@ -52,38 +58,86 @@ void setup()
   {
     pinMode(allSwitchIds[i], INPUT);
   }
-  Serial.begin(9600);
+  Serial.begin(115200);
 }
 
 void loop()
 {
-  for(int i = 0; i < numPins; i++){
-    btnUnbouncedPressed(i);
-  }
-  
+  keyInputProcessing();
 }
+
+// The main logic of the board inputs and the state changes into the colormode and the firing of the commands to the pc
+void keyInputProcessing(){
+ for(int i = 0; i < numPins; i++){
+    KeyState btnState = btnUnbouncedPressed(i);
+    if( btnState == PRESSED  && !colorChangeMode){
+      if(switchStates == 65){ // 65 is the Equivalent bitmask for f1 and f7 pressed
+        colorChangeMode = true;
+        Serial.println("Colormode Enabled");
+      }
+    } else if (btnState == PRESSED && colorChangeMode){
+      changColorMode(i);
+    } else if(btnState == RELEASED && !colorChangeMode){
+      Serial.println(btnCmdPrefix + (String)i);
+    } else if(btnState == RELEASED && colorChangeMode){
+      if(getSetBits() < 1){
+        colorChangeMode = false;
+        Serial.println("Colormode Disabled");
+      }
+    }
+  }
+}
+
 
 // Unbouncing the button pressed by comparing the timestamp and if the waitTime is big enough and the button is still pressed
 // then button gets triggered and the command gets send
-void btnUnbouncedPressed(int btnId){
+KeyState btnUnbouncedPressed(int btnId){
 
   unsigned long currentMillis = millis();
-  uint16_t mask = 1<<btnId;
+  uint16_t mask = 1UL << btnId;
   if(digitalRead(allSwitchIds[btnId]) && (currentMillis - unbouncingButtonTime[btnId] >= waitTime ) && !(switchStates & mask)){
 
-      Serial.println(btnCmdPrefix + (String)btnId);
       switchStates |= 1UL << btnId;
       unbouncingButtonTime[btnId] = currentMillis;
-
+    return PRESSED;
   } else if(!digitalRead(allSwitchIds[btnId]) && (switchStates & mask)) {
 
     unbouncingButtonTime[btnId]= currentMillis;
     switchStates &= ~(1UL << btnId);
-
+    return RELEASED;
   }
+  return NONE;
 }
 
-    // For Debuggign printing bitarray
+// Returns the number of set bits in the switchState mask
+uint8_t getSetBits(){
+  uint8_t bitCounter = 0;
+  uint16_t bufferStates = switchStates;
+  while(bufferStates){
+      bitCounter += bufferStates & 1; 
+      bufferStates >>= 1; 
+  }
+  return bitCounter;
+}
+
+// When button f1 and f7 are pressed at the same time then color mode can be changed with the remaining buttons
+// f1 + f7  (Buttoncombination) + 
+// f2 (Mode 1)  -> off
+// f3 (Mode 2) -> fix
+// f4 (Mode 3) -> rainbow
+// f5 (Mode 4) -> fade
+// f6 (Mode 5) -> running
+// f8 (Mode 6) -> ?
+// f9 (Mode 7) -> ?
+// f10 (Mode 8) -> ?
+// f11 (Mode 9) -> ?
+// f12 (Mode 10) -> ?
+
+void changColorMode(int mode){
+  Serial.println("Colormode changed to " + (String) mode);
+}
+
+// For Debuggign printing bitarray
  void printBitArrayDebug(unsigned n)
 {
   int k;
