@@ -1,3 +1,5 @@
+#include <LedInterface.h>
+
 // Input of the Keys with their connected pin
 #define F1_INPUT 2
 #define F2_INPUT 3
@@ -50,20 +52,28 @@ long waitTime = 80;
 // Enables the mode to change the color
 bool colorChangeMode = false;
 
+// Interface to the Leds
+LedInterface ledInterface;
+
 // Init Setupmethod
 void setup()
 {
-  //FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);
+  ledInterface = LedInterface();
+  ledInterface.init(13);
+  ledInterface.toggleOnState();
   for (int i = 0; i < numPins; i++)
   {
     pinMode(allSwitchIds[i], INPUT);
   }
+
+
   Serial.begin(115200);
 }
 
 void loop()
 {
   keyInputProcessing();
+  ledInterface.ledMainLoop();
 }
 
 // The main logic of the board inputs and the state changes into the colormode and the firing of the commands to the pc
@@ -73,7 +83,7 @@ void keyInputProcessing(){
     if( btnState == PRESSED  && !colorChangeMode){
       if(switchStates == 65){ // 65 is the Equivalent bitmask for f1 and f7 pressed (0000000010000001)
         colorChangeMode = true;
-        Serial.println("Colormode Enabled");
+        Serial.println("[DBG]Colormode Enabled");
       }
     } else if (btnState == PRESSED && colorChangeMode){
       changColorMode(i);
@@ -82,7 +92,7 @@ void keyInputProcessing(){
     } else if(btnState == RELEASED && colorChangeMode){
       if(getSetBits() < 1){
         colorChangeMode = false;
-        Serial.println("Colormode Disabled");
+        Serial.println("[DBG]Colormode Disabled");
       }
     }
   }
@@ -122,19 +132,50 @@ uint8_t getSetBits(){
 
 // When button f1 and f7 are pressed at the same time then color mode can be changed with the remaining buttons
 // f1 + f7  (Buttoncombination) + 
-// f2 (Mode 1)  -> off
-// f3 (Mode 2) -> fix
-// f4 (Mode 3) -> rainbow
-// f5 (Mode 4) -> fade
-// f6 (Mode 5) -> running
-// f8 (Mode 6) -> ?
-// f9 (Mode 7) -> ?
-// f10 (Mode 8) -> ?
-// f11 (Mode 9) -> ?
-// f12 (Mode 10) -> ?
+// The following modes are mapped with the keyposition in the array (Number in the braces)
+// f2(1) (Mode 1)  -> toggle on and off
+// f3(2) (Mode 2) -> fix
+// f4(3) (Mode 3) -> rainbow
+// f5(4) (Mode 4) -> fade
+// f6(5) (Mode 5) -> running
+// f8(7) (Mode 6) -> ?
+// f9(8) (Mode 7) -> ?
+// f10(9) (Mode 8) -> ?
+// f11(10) (Mode 9) -> ?
+// f12(11) (Mode 10) -> ?
 
 void changColorMode(int mode){
-  Serial.println("Colormode changed to " + (String) mode);
+  switch(mode){
+    case 1:
+      ledInterface.toggleOnState();
+      break;
+    case 2:
+      ledInterface.setColorMode(LedInterface::LedModes::FIX_COLOR);
+      break;
+    case 3:
+      ledInterface.setColorMode(LedInterface::LedModes::RAINBOW);
+      break;
+    case 4:
+
+      break;
+    case 5:
+
+      break;
+    case 7:
+
+      break;
+      case 8:
+
+      break;
+    case 9:
+
+      break;
+    case 10:
+
+      break;
+    case 11:
+      break;
+  }
 }
 
 // For Debuggign printing bitarray
