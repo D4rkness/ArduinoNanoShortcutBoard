@@ -1,0 +1,4 @@
+shortcut_firmware/.vscode/*
+shortcut_firmware/build/*
+pc_app/.idea/*
+pc_app/venv/*
