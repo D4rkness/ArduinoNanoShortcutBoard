@@ -156,16 +156,16 @@ void changColorMode(int mode){
       ledInterface.setColorMode(LedInterface::LedModes::RAINBOW);
       break;
     case 4:
-
+      ledInterface.setColorMode(LedInterface::LedModes::LIGHTNING);
       break;
     case 5:
-
+      ledInterface.setColorMode(LedInterface::LedModes::RUNNING);
       break;
     case 7:
-
+      ledInterface.setColorMode(LedInterface::LedModes::FILLED_RUNNING);
       break;
-      case 8:
-
+    case 8:
+      ledInterface.setColorMode(LedInterface::LedModes::SIDE_CENTER_RUNNING);
       break;
     case 9:
 
@@ -174,6 +174,7 @@ void changColorMode(int mode){
 
       break;
     case 11:
+      ledInterface.setColorMode(LedInterface::LedModes::STROBE);
       break;
   }
 }

@@ -8,7 +8,7 @@
 class LedInterface{
 
     public:
-        enum LedModes {FIX_COLOR, RAINBOW, FADE, RUNNING, FILLED_RUNNING, SIDE_CENTER_RUNNING, LIGHTNING};
+        enum LedModes {FIX_COLOR, RAINBOW, FADE, RUNNING, FILLED_RUNNING, SIDE_CENTER_RUNNING, LIGHTNING, STROBE};
         static LedModes modes;
         
     public:
@@ -35,6 +35,20 @@ class LedInterface{
         LedModes currMode = FIX_COLOR;
         
         CRGB leds[NUM_LEDS];
+
+        
+        // Representation of the Modes as Method, all relevant data is inside of them
+        void fixColorMode();
+        void rainbowMode();
+        void fadeMode();
+        void runningMode();
+        void filledRunningMode();
+        void sideCenterRunningModes();
+        void lightningMode();
+        void strobeMode();
+        void initAnimation();
+        void clearAllLeds();
+
 };
 
 #endif
