@@ -31,5 +31,5 @@ class Controller:
     def set_color(self, color):
         meh = 0
 
-    def set_debug_mode(self, enable_debug_mode):
+    def set_debug_mode(self):
         meh = 0

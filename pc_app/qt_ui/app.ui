@@ -512,13 +512,13 @@
     <property name="title">
      <string>Menu</string>
     </property>
-    <widget class="QMenu" name="menuSelect_config">
+    <widget class="QMenu" name="menu_bar">
      <property name="title">
       <string>Select config</string>
      </property>
      <addaction name="actiondefault"/>
     </widget>
-    <addaction name="menuSelect_config"/>
+    <addaction name="menu_bar"/>
     <addaction name="actionEnable_debug"/>
    </widget>
    <addaction name="menuMenu"/>
