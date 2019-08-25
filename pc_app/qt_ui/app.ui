@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>579</width>
-    <height>483</height>
+    <height>505</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -499,6 +499,40 @@
    </layout>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>579</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Menu</string>
+    </property>
+    <widget class="QMenu" name="menuSelect_config">
+     <property name="title">
+      <string>Select config</string>
+     </property>
+     <addaction name="actiondefault"/>
+    </widget>
+    <addaction name="menuSelect_config"/>
+    <addaction name="actionEnable_debug"/>
+   </widget>
+   <addaction name="menuMenu"/>
+  </widget>
+  <action name="actionEnable_debug">
+   <property name="text">
+    <string>Enable debug</string>
+   </property>
+  </action>
+  <action name="actiondefault">
+   <property name="text">
+    <string>default</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

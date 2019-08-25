@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'app.ui',
 # licensing of 'app.ui' applies.
 #
-# Created: Tue Aug 20 23:15:34 2019
+# Created: Sun Aug 25 22:28:29 2019
 #      by: pyside2-uic  running on PySide2 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -13,7 +13,7 @@ from PySide2 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(579, 483)
+        MainWindow.resize(579, 505)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
@@ -279,6 +279,22 @@ class Ui_MainWindow(object):
         self.statusbar = QtWidgets.QStatusBar(MainWindow)
         self.statusbar.setObjectName("statusbar")
         MainWindow.setStatusBar(self.statusbar)
+        self.menuBar = QtWidgets.QMenuBar(MainWindow)
+        self.menuBar.setGeometry(QtCore.QRect(0, 0, 579, 22))
+        self.menuBar.setObjectName("menuBar")
+        self.menuMenu = QtWidgets.QMenu(self.menuBar)
+        self.menuMenu.setObjectName("menuMenu")
+        self.menuSelect_config = QtWidgets.QMenu(self.menuMenu)
+        self.menuSelect_config.setObjectName("menuSelect_config")
+        MainWindow.setMenuBar(self.menuBar)
+        self.actionEnable_debug = QtWidgets.QAction(MainWindow)
+        self.actionEnable_debug.setObjectName("actionEnable_debug")
+        self.actiondefault = QtWidgets.QAction(MainWindow)
+        self.actiondefault.setObjectName("actiondefault")
+        self.menuSelect_config.addAction(self.actiondefault)
+        self.menuMenu.addAction(self.menuSelect_config.menuAction())
+        self.menuMenu.addAction(self.actionEnable_debug)
+        self.menuBar.addAction(self.menuMenu.menuAction())
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -325,4 +341,18 @@ class Ui_MainWindow(object):
         self.btn_f12_set.setText(QtWidgets.QApplication.translate("MainWindow", "Set", None, -1))
         self.btn_f12_delete.setText(QtWidgets.QApplication.translate("MainWindow", "Delete", None, -1))
         self.btn_setcolor.setText(QtWidgets.QApplication.translate("MainWindow", "Set Color", None, -1))
+        self.menuMenu.setTitle(QtWidgets.QApplication.translate("MainWindow", "Menu", None, -1))
+        self.menuSelect_config.setTitle(QtWidgets.QApplication.translate("MainWindow", "Select config", None, -1))
+        self.actionEnable_debug.setText(QtWidgets.QApplication.translate("MainWindow", "Enable debug", None, -1))
+        self.actiondefault.setText(QtWidgets.QApplication.translate("MainWindow", "default", None, -1))
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    MainWindow = QtWidgets.QMainWindow()
+    ui = Ui_MainWindow()
+    ui.setupUi(MainWindow)
+    MainWindow.show()
+    sys.exit(app.exec_())
 
