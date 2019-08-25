@@ -89,7 +89,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_10">
       <item>
-       <widget class="QLabel" name="label_10">
+       <widget class="QLabel" name="f1_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -122,7 +122,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_12">
       <item>
-       <widget class="QLabel" name="label_12">
+       <widget class="QLabel" name="f2_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -155,7 +155,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_3">
       <item>
-       <widget class="QLabel" name="label_3">
+       <widget class="QLabel" name="f3_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -188,7 +188,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_4">
       <item>
-       <widget class="QLabel" name="label_4">
+       <widget class="QLabel" name="f4_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -221,7 +221,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_8">
       <item>
-       <widget class="QLabel" name="label_8">
+       <widget class="QLabel" name="f5_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -254,7 +254,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_13">
       <item>
-       <widget class="QLabel" name="label_13">
+       <widget class="QLabel" name="f6_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -287,7 +287,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_7">
       <item>
-       <widget class="QLabel" name="label_7">
+       <widget class="QLabel" name="f7_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -320,7 +320,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_9">
       <item>
-       <widget class="QLabel" name="label_9">
+       <widget class="QLabel" name="f8_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -353,7 +353,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_6">
       <item>
-       <widget class="QLabel" name="label_6">
+       <widget class="QLabel" name="f9_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -386,7 +386,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_11">
       <item>
-       <widget class="QLabel" name="label_11">
+       <widget class="QLabel" name="f10_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -419,7 +419,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_5">
       <item>
-       <widget class="QLabel" name="label_5">
+       <widget class="QLabel" name="f11_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -452,7 +452,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout_2">
       <item>
-       <widget class="QLabel" name="label_2">
+       <widget class="QLabel" name="f12_label">
         <property name="font">
          <font>
           <pointsize>10</pointsize>
@@ -525,7 +525,7 @@
   </widget>
   <action name="actionEnable_debug">
    <property name="text">
-    <string>Enable debug</string>
+    <string>debug: false</string>
    </property>
   </action>
   <action name="actiondefault">

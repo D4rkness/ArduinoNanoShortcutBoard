@@ -1,6 +1,9 @@
 import sys
 from PySide2.QtWidgets import QApplication, QMainWindow
-from PySide2.QtCore import QFile
+from app_logic.View import View
+from app_logic.Model import Model
+from app_logic.Controller import Controller
+
 from qt_ui.app import Ui_MainWindow
 
 
@@ -9,9 +12,11 @@ class MainWindow(QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
+        self.model = Model()
+        self.controller = Controller(self.model)
+        self.view = View(self.controller, self.ui)
+        self.model.add_view(self.view)
 
-    def init_ui(self):
-        meh = None
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
