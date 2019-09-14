@@ -44,18 +44,18 @@ class View:
         self.ui.btn_f12_set.addAction(self.open_connect_dialog_for_key(Key.F12))
 
     def init_debug_buttons(self):
-        self.ui.btn_debug_f1.addAction(self.controller.remove_configuration_from_key(Key.F1))
-        self.ui.btn_debug_f2.addAction(self.controller.remove_configuration_from_key(Key.F2))
-        self.ui.btn_debug_f3.addAction(self.controller.remove_configuration_from_key(Key.F3))
-        self.ui.btn_debug_f4.addAction(self.controller.remove_configuration_from_key(Key.F4))
-        self.ui.btn_debug_f5.addAction(self.controller.remove_configuration_from_key(Key.F5))
-        self.ui.btn_debug_f6.addAction(self.controller.remove_configuration_from_key(Key.F6))
-        self.ui.btn_debug_f7.addAction(self.controller.remove_configuration_from_key(Key.F7))
-        self.ui.btn_debug_f8.addAction(self.controller.remove_configuration_from_key(Key.F8))
-        self.ui.btn_debug_f9.addAction(self.controller.remove_configuration_from_key(Key.F9))
-        self.ui.btn_debug_f10.addAction(self.controller.remove_configuration_from_key(Key.F10))
-        self.ui.btn_debug_f11.addAction(self.controller.remove_configuration_from_key(Key.F11))
-        self.ui.btn_debug_f12.addAction(self.controller.remove_configuration_from_key(Key.F12))
+        self.ui.btn_debug_f1.addAction(self.controller.trigger_debug_key(Key.F1))
+        self.ui.btn_debug_f2.addAction(self.controller.trigger_debug_key(Key.F2))
+        self.ui.btn_debug_f3.addAction(self.controller.trigger_debug_key(Key.F3))
+        self.ui.btn_debug_f4.addAction(self.controller.trigger_debug_key(Key.F4))
+        self.ui.btn_debug_f5.addAction(self.controller.trigger_debug_key(Key.F5))
+        self.ui.btn_debug_f6.addAction(self.controller.trigger_debug_key(Key.F6))
+        self.ui.btn_debug_f7.addAction(self.controller.trigger_debug_key(Key.F7))
+        self.ui.btn_debug_f8.addAction(self.controller.trigger_debug_key(Key.F8))
+        self.ui.btn_debug_f9.addAction(self.controller.trigger_debug_key(Key.F9))
+        self.ui.btn_debug_f10.addAction(self.controller.trigger_debug_key(Key.F10))
+        self.ui.btn_debug_f11.addAction(self.controller.trigger_debug_key(Key.F11))
+        self.ui.btn_debug_f12.addAction(self.controller.trigger_debug_key(Key.F12))
 
     def open_connect_dialog_for_key(self, key):
         meh = 0
