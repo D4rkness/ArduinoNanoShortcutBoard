@@ -87,7 +87,7 @@
      </widget>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_10">
+     <layout class="QHBoxLayout" name="f1_layout">
       <item>
        <widget class="QLabel" name="f1_label">
         <property name="font">
@@ -117,10 +117,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f1">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_12">
+     <layout class="QHBoxLayout" name="f2_layout">
       <item>
        <widget class="QLabel" name="f2_label">
         <property name="font">
@@ -150,10 +157,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f2">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <layout class="QHBoxLayout" name="f3_layout">
       <item>
        <widget class="QLabel" name="f3_label">
         <property name="font">
@@ -183,10 +197,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f3">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <layout class="QHBoxLayout" name="f4_layout">
       <item>
        <widget class="QLabel" name="f4_label">
         <property name="font">
@@ -216,10 +237,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f4">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_8">
+     <layout class="QHBoxLayout" name="f5_layout">
       <item>
        <widget class="QLabel" name="f5_label">
         <property name="font">
@@ -249,10 +277,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f5">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_13">
+     <layout class="QHBoxLayout" name="f6_layout">
       <item>
        <widget class="QLabel" name="f6_label">
         <property name="font">
@@ -282,10 +317,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f6">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_7">
+     <layout class="QHBoxLayout" name="f7_layout">
       <item>
        <widget class="QLabel" name="f7_label">
         <property name="font">
@@ -315,10 +357,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f7">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <layout class="QHBoxLayout" name="f8_layout">
       <item>
        <widget class="QLabel" name="f8_label">
         <property name="font">
@@ -348,10 +397,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f8">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_6">
+     <layout class="QHBoxLayout" name="f9_layout">
       <item>
        <widget class="QLabel" name="f9_label">
         <property name="font">
@@ -381,10 +437,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f9">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_11">
+     <layout class="QHBoxLayout" name="f10_layout">
       <item>
        <widget class="QLabel" name="f10_label">
         <property name="font">
@@ -414,10 +477,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f10">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <layout class="QHBoxLayout" name="f11_layout">
       <item>
        <widget class="QLabel" name="f11_label">
         <property name="font">
@@ -447,10 +517,17 @@
         </property>
        </widget>
       </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f11">
+        <property name="text">
+         <string>Debug</string>
+        </property>
+       </widget>
+      </item>
      </layout>
     </item>
     <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <layout class="QHBoxLayout" name="f12_layout">
       <item>
        <widget class="QLabel" name="f12_label">
         <property name="font">
@@ -477,6 +554,13 @@
        <widget class="QPushButton" name="btn_f12_delete">
         <property name="text">
          <string>Delete</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_debug_f12">
+        <property name="text">
+         <string>Debug</string>
         </property>
        </widget>
       </item>

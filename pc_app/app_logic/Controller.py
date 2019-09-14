@@ -1,8 +1,11 @@
+from app_logic.Model import Model
+from app_logic.Enums import Key
+
 
 class Controller:
 
     def __init__(self, model):
-        meh = 0
+        self.model = model
 
     def add_key_combination_to_key(self, key, button_combination):
         meh = 0
@@ -31,5 +34,8 @@ class Controller:
     def set_color(self, color):
         meh = 0
 
-    def set_debug_mode(self):
+    def trigger_debug_key(self, key):
         meh = 0
+
+    def set_debug_mode(self):
+        self.model.set_debug_mode()
