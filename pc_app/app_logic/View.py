@@ -12,50 +12,53 @@ class View:
 
     # noinspection DuplicatedCode
     def init_buttons(self):
-        self.ui.btn_connect.addAction(self.controller.connect_com_port())
-        self.ui.btn_setcolor.addAction(self.open_color_dialog())
+
+        # self.ui.btn_debug_f1.clicked.connect(lambda: self.fuck(2))
+
+        self.ui.btn_connect.clicked.connect(lambda: self.controller.search_for_ports())
+        self.ui.btn_setcolor.clicked.connect(lambda: self.open_color_dialog())
 
         self.ui.actionEnable_debug.triggered.connect(self.controller.set_debug_mode)
 
-        self.ui.btn_f1_delete.addAction(self.controller.remove_configuration_from_key(Key.F1))
-        self.ui.btn_f2_delete.addAction(self.controller.remove_configuration_from_key(Key.F2))
-        self.ui.btn_f3_delete.addAction(self.controller.remove_configuration_from_key(Key.F3))
-        self.ui.btn_f4_delete.addAction(self.controller.remove_configuration_from_key(Key.F4))
-        self.ui.btn_f5_delete.addAction(self.controller.remove_configuration_from_key(Key.F5))
-        self.ui.btn_f6_delete.addAction(self.controller.remove_configuration_from_key(Key.F6))
-        self.ui.btn_f7_delete.addAction(self.controller.remove_configuration_from_key(Key.F7))
-        self.ui.btn_f8_delete.addAction(self.controller.remove_configuration_from_key(Key.F8))
-        self.ui.btn_f9_delete.addAction(self.controller.remove_configuration_from_key(Key.F9))
-        self.ui.btn_f10_delete.addAction(self.controller.remove_configuration_from_key(Key.F10))
-        self.ui.btn_f11_delete.addAction(self.controller.remove_configuration_from_key(Key.F11))
-        self.ui.btn_f12_delete.addAction(self.controller.remove_configuration_from_key(Key.F12))
+        self.ui.btn_f1_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F1))
+        self.ui.btn_f2_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F2))
+        self.ui.btn_f3_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F3))
+        self.ui.btn_f4_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F4))
+        self.ui.btn_f5_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F5))
+        self.ui.btn_f6_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F6))
+        self.ui.btn_f7_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F7))
+        self.ui.btn_f8_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F8))
+        self.ui.btn_f9_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F9))
+        self.ui.btn_f10_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F10))
+        self.ui.btn_f11_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F11))
+        self.ui.btn_f12_delete.clicked.connect(lambda: self.controller.remove_configuration_from_key(Key.F12))
 
-        self.ui.btn_f1_set.addAction(self.open_connect_dialog_for_key(Key.F1))
-        self.ui.btn_f2_set.addAction(self.open_connect_dialog_for_key(Key.F2))
-        self.ui.btn_f3_set.addAction(self.open_connect_dialog_for_key(Key.F3))
-        self.ui.btn_f4_set.addAction(self.open_connect_dialog_for_key(Key.F4))
-        self.ui.btn_f5_set.addAction(self.open_connect_dialog_for_key(Key.F5))
-        self.ui.btn_f6_set.addAction(self.open_connect_dialog_for_key(Key.F6))
-        self.ui.btn_f7_set.addAction(self.open_connect_dialog_for_key(Key.F7))
-        self.ui.btn_f8_set.addAction(self.open_connect_dialog_for_key(Key.F8))
-        self.ui.btn_f9_set.addAction(self.open_connect_dialog_for_key(Key.F9))
-        self.ui.btn_f10_set.addAction(self.open_connect_dialog_for_key(Key.F10))
-        self.ui.btn_f11_set.addAction(self.open_connect_dialog_for_key(Key.F11))
-        self.ui.btn_f12_set.addAction(self.open_connect_dialog_for_key(Key.F12))
+        self.ui.btn_f1_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F1))
+        self.ui.btn_f2_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F2))
+        self.ui.btn_f3_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F3))
+        self.ui.btn_f4_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F4))
+        self.ui.btn_f5_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F5))
+        self.ui.btn_f6_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F6))
+        self.ui.btn_f7_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F7))
+        self.ui.btn_f8_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F8))
+        self.ui.btn_f9_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F9))
+        self.ui.btn_f10_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F10))
+        self.ui.btn_f11_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F11))
+        self.ui.btn_f12_set.clicked.connect(lambda: self.open_connect_dialog_for_key(Key.F12))
 
     def init_debug_buttons(self):
-        self.ui.btn_debug_f1.addAction(self.controller.trigger_debug_key(Key.F1))
-        self.ui.btn_debug_f2.addAction(self.controller.trigger_debug_key(Key.F2))
-        self.ui.btn_debug_f3.addAction(self.controller.trigger_debug_key(Key.F3))
-        self.ui.btn_debug_f4.addAction(self.controller.trigger_debug_key(Key.F4))
-        self.ui.btn_debug_f5.addAction(self.controller.trigger_debug_key(Key.F5))
-        self.ui.btn_debug_f6.addAction(self.controller.trigger_debug_key(Key.F6))
-        self.ui.btn_debug_f7.addAction(self.controller.trigger_debug_key(Key.F7))
-        self.ui.btn_debug_f8.addAction(self.controller.trigger_debug_key(Key.F8))
-        self.ui.btn_debug_f9.addAction(self.controller.trigger_debug_key(Key.F9))
-        self.ui.btn_debug_f10.addAction(self.controller.trigger_debug_key(Key.F10))
-        self.ui.btn_debug_f11.addAction(self.controller.trigger_debug_key(Key.F11))
-        self.ui.btn_debug_f12.addAction(self.controller.trigger_debug_key(Key.F12))
+        self.ui.btn_debug_f1.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F1))
+        self.ui.btn_debug_f2.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F2))
+        self.ui.btn_debug_f3.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F3))
+        self.ui.btn_debug_f4.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F4))
+        self.ui.btn_debug_f5.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F5))
+        self.ui.btn_debug_f6.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F6))
+        self.ui.btn_debug_f7.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F7))
+        self.ui.btn_debug_f8.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F8))
+        self.ui.btn_debug_f9.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F9))
+        self.ui.btn_debug_f10.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F10))
+        self.ui.btn_debug_f11.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F11))
+        self.ui.btn_debug_f12.clicked.connect(lambda: self.controller.trigger_debug_key(Key.F12))
 
     def open_connect_dialog_for_key(self, key):
         meh = 0
@@ -63,8 +66,10 @@ class View:
     def open_color_dialog(self):
         meh = 0
 
-    def add_entrys_to_spinner_bar(self):
-        meh = 0
+    def add_entrys_to_spinner_bar_ports(self, port_names):
+        self.ui.combobox_comport.clear()
+        for port_name in port_names:
+            self.ui.combobox_comport.addItem(port_name)
 
     def add_debug_buttons(self):
         self.ui.btn_debug_f1.setVisible(True)
