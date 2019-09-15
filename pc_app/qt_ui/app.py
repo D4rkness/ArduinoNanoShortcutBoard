@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file 'app.ui',
 # licensing of 'app.ui' applies.
 #
-# Created: Sat Sep 14 22:28:17 2019
+# Created: Sun Sep 15 00:17:55 2019
 #      by: pyside2-uic  running on PySide2 5.13.0
 #
 # WARNING! All changes made in this file will be lost!
@@ -32,6 +32,10 @@ class Ui_MainWindow(object):
         self.combobox_comport.setMaximumSize(QtCore.QSize(100, 16777215))
         self.combobox_comport.setObjectName("combobox_comport")
         self.horizontalLayout.addWidget(self.combobox_comport)
+        self.btn_search_ports = QtWidgets.QPushButton(self.centralwidget)
+        self.btn_search_ports.setMaximumSize(QtCore.QSize(50, 16777215))
+        self.btn_search_ports.setObjectName("btn_search_ports")
+        self.horizontalLayout.addWidget(self.btn_search_ports)
         self.btn_connect = QtWidgets.QPushButton(self.centralwidget)
         self.btn_connect.setMaximumSize(QtCore.QSize(100, 16777215))
         self.btn_connect.setObjectName("btn_connect")
@@ -60,6 +64,7 @@ class Ui_MainWindow(object):
         self.f1_label.setObjectName("f1_label")
         self.f1_layout.addWidget(self.f1_label)
         self.f1_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f1_shortcut_field.setReadOnly(True)
         self.f1_shortcut_field.setObjectName("f1_shortcut_field")
         self.f1_layout.addWidget(self.f1_shortcut_field)
         self.btn_f1_set = QtWidgets.QPushButton(self.centralwidget)
@@ -81,6 +86,7 @@ class Ui_MainWindow(object):
         self.f2_label.setObjectName("f2_label")
         self.f2_layout.addWidget(self.f2_label)
         self.f2_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f2_shortcut_field.setReadOnly(True)
         self.f2_shortcut_field.setObjectName("f2_shortcut_field")
         self.f2_layout.addWidget(self.f2_shortcut_field)
         self.btn_f2_set = QtWidgets.QPushButton(self.centralwidget)
@@ -102,6 +108,7 @@ class Ui_MainWindow(object):
         self.f3_label.setObjectName("f3_label")
         self.f3_layout.addWidget(self.f3_label)
         self.f3_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f3_shortcut_field.setReadOnly(True)
         self.f3_shortcut_field.setObjectName("f3_shortcut_field")
         self.f3_layout.addWidget(self.f3_shortcut_field)
         self.btn_f3_set = QtWidgets.QPushButton(self.centralwidget)
@@ -123,6 +130,7 @@ class Ui_MainWindow(object):
         self.f4_label.setObjectName("f4_label")
         self.f4_layout.addWidget(self.f4_label)
         self.f4_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f4_shortcut_field.setReadOnly(True)
         self.f4_shortcut_field.setObjectName("f4_shortcut_field")
         self.f4_layout.addWidget(self.f4_shortcut_field)
         self.btn_f4_set = QtWidgets.QPushButton(self.centralwidget)
@@ -144,6 +152,7 @@ class Ui_MainWindow(object):
         self.f5_label.setObjectName("f5_label")
         self.f5_layout.addWidget(self.f5_label)
         self.f5_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f5_shortcut_field.setReadOnly(True)
         self.f5_shortcut_field.setObjectName("f5_shortcut_field")
         self.f5_layout.addWidget(self.f5_shortcut_field)
         self.btn_f5_set = QtWidgets.QPushButton(self.centralwidget)
@@ -165,6 +174,7 @@ class Ui_MainWindow(object):
         self.f6_label.setObjectName("f6_label")
         self.f6_layout.addWidget(self.f6_label)
         self.f6_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f6_shortcut_field.setReadOnly(True)
         self.f6_shortcut_field.setObjectName("f6_shortcut_field")
         self.f6_layout.addWidget(self.f6_shortcut_field)
         self.btn_f6_set = QtWidgets.QPushButton(self.centralwidget)
@@ -186,6 +196,7 @@ class Ui_MainWindow(object):
         self.f7_label.setObjectName("f7_label")
         self.f7_layout.addWidget(self.f7_label)
         self.f7_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f7_shortcut_field.setReadOnly(True)
         self.f7_shortcut_field.setObjectName("f7_shortcut_field")
         self.f7_layout.addWidget(self.f7_shortcut_field)
         self.btn_f7_set = QtWidgets.QPushButton(self.centralwidget)
@@ -207,6 +218,7 @@ class Ui_MainWindow(object):
         self.f8_label.setObjectName("f8_label")
         self.f8_layout.addWidget(self.f8_label)
         self.f8_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f8_shortcut_field.setReadOnly(True)
         self.f8_shortcut_field.setObjectName("f8_shortcut_field")
         self.f8_layout.addWidget(self.f8_shortcut_field)
         self.btn_f8_set = QtWidgets.QPushButton(self.centralwidget)
@@ -228,6 +240,7 @@ class Ui_MainWindow(object):
         self.f9_label.setObjectName("f9_label")
         self.f9_layout.addWidget(self.f9_label)
         self.f9_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f9_shortcut_field.setReadOnly(True)
         self.f9_shortcut_field.setObjectName("f9_shortcut_field")
         self.f9_layout.addWidget(self.f9_shortcut_field)
         self.btn_f9_set = QtWidgets.QPushButton(self.centralwidget)
@@ -249,6 +262,7 @@ class Ui_MainWindow(object):
         self.f10_label.setObjectName("f10_label")
         self.f10_layout.addWidget(self.f10_label)
         self.f10_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f10_shortcut_field.setReadOnly(True)
         self.f10_shortcut_field.setObjectName("f10_shortcut_field")
         self.f10_layout.addWidget(self.f10_shortcut_field)
         self.btn_f10_set = QtWidgets.QPushButton(self.centralwidget)
@@ -270,6 +284,7 @@ class Ui_MainWindow(object):
         self.f11_label.setObjectName("f11_label")
         self.f11_layout.addWidget(self.f11_label)
         self.f11_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f11_shortcut_field.setReadOnly(True)
         self.f11_shortcut_field.setObjectName("f11_shortcut_field")
         self.f11_layout.addWidget(self.f11_shortcut_field)
         self.btn_f11_set = QtWidgets.QPushButton(self.centralwidget)
@@ -291,6 +306,7 @@ class Ui_MainWindow(object):
         self.f12_label.setObjectName("f12_label")
         self.f12_layout.addWidget(self.f12_label)
         self.f12_shortcut_field = QtWidgets.QLineEdit(self.centralwidget)
+        self.f12_shortcut_field.setReadOnly(True)
         self.f12_shortcut_field.setObjectName("f12_shortcut_field")
         self.f12_layout.addWidget(self.f12_shortcut_field)
         self.btn_f12_set = QtWidgets.QPushButton(self.centralwidget)
@@ -338,6 +354,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "MainWindow", None, -1))
         self.label.setText(QtWidgets.QApplication.translate("MainWindow", "Select COM-Port", None, -1))
+        self.btn_search_ports.setText(QtWidgets.QApplication.translate("MainWindow", "Search", None, -1))
         self.btn_connect.setText(QtWidgets.QApplication.translate("MainWindow", "Connect", None, -1))
         self.label_connected.setText(QtWidgets.QApplication.translate("MainWindow", "Disconnected", None, -1))
         self.f1_label.setText(QtWidgets.QApplication.translate("MainWindow", "F1 Shortcut:  ", None, -1))

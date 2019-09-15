@@ -25,10 +25,11 @@ class Controller:
     def execute_test_button_press(self, key):
         meh = 0
 
-    def select_comport(self, com_port):
-        meh = 0
+    def search_for_ports(self):
+        self.model.get_available_comports()
 
-    def connect_com_port(self):
+    def connect_com_port(self, selected_port):
+        self.model.connect_to_com_port(selected_port)
         meh = 0
 
     def set_color(self, color):

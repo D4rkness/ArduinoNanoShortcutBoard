@@ -49,6 +49,19 @@
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="btn_search_ports">
+        <property name="maximumSize">
+         <size>
+          <width>50</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Search</string>
+        </property>
+       </widget>
+      </item>
+      <item>
        <widget class="QPushButton" name="btn_connect">
         <property name="maximumSize">
          <size>
@@ -101,7 +114,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f1_shortcut_field"/>
+       <widget class="QLineEdit" name="f1_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f1_set">
@@ -141,7 +158,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f2_shortcut_field"/>
+       <widget class="QLineEdit" name="f2_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f2_set">
@@ -181,7 +202,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f3_shortcut_field"/>
+       <widget class="QLineEdit" name="f3_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f3_set">
@@ -221,7 +246,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f4_shortcut_field"/>
+       <widget class="QLineEdit" name="f4_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f4_set">
@@ -261,7 +290,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f5_shortcut_field"/>
+       <widget class="QLineEdit" name="f5_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f5_set">
@@ -301,7 +334,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f6_shortcut_field"/>
+       <widget class="QLineEdit" name="f6_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f6_set">
@@ -341,7 +378,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f7_shortcut_field"/>
+       <widget class="QLineEdit" name="f7_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f7_set">
@@ -381,7 +422,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f8_shortcut_field"/>
+       <widget class="QLineEdit" name="f8_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f8_set">
@@ -421,7 +466,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f9_shortcut_field"/>
+       <widget class="QLineEdit" name="f9_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f9_set">
@@ -461,7 +510,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f10_shortcut_field"/>
+       <widget class="QLineEdit" name="f10_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f10_set">
@@ -501,7 +554,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f11_shortcut_field"/>
+       <widget class="QLineEdit" name="f11_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f11_set">
@@ -541,7 +598,11 @@
        </widget>
       </item>
       <item>
-       <widget class="QLineEdit" name="f12_shortcut_field"/>
+       <widget class="QLineEdit" name="f12_shortcut_field">
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
       </item>
       <item>
        <widget class="QPushButton" name="btn_f12_set">

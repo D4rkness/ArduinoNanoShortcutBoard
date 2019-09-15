@@ -1,3 +1,4 @@
+import utils.ComBusController as ComBusController
 
 
 class Model:
@@ -6,8 +7,6 @@ class Model:
         self.view = None
         self.debug_mode = False
         self.color = 0
-        self.connected = False
-        self.com_port = 0
 
     def add_view(self, view):
         self.view = view
@@ -30,8 +29,20 @@ class Model:
     def execute_test_button_press(self, key):
         meh = 0
 
-    def set_active_com_port(self, key):
-        meh = 0
+    def get_available_comports(self):
+        if self.view is not None:
+            self.view.add_entrys_to_spinner_bar_ports(ComBusController.get_instance().get_all_comports())
+
+    def connect_to_com_port(self, selected_port):
+        if ComBusController.get_instance().is_connected():
+            ComBusController.get_instance().close_connection()
+        else:
+            port = ComBusController.get_instance().translate_selection_to_port(selected_port)
+            if port is not None:
+                ComBusController.get_instance().connect_to_port(port)
+
+        if self.view is not None:
+            self.view.is_connected_state(ComBusController.get_instance().is_connected())
 
     def set_color(self, color):
         meh = 0
